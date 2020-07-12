@@ -3,19 +3,62 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/itemLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
 
-    <TextView
-        android:id="@+id/miwokText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="lutti" />
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/list_item_height">
 
-    <TextView
-        android:id="@+id/englishText"
+    <ImageView
+        android:background="@color/tan_background"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:id="@+id/image"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="one" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/textContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingRight="42dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            >
+
+            <TextView
+                android:id="@+id/miwokText"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="lutti" />
+
+            <TextView
+                android:id="@+id/englishText"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="one" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ic_baseline_play_arrow_24"
+
+            />
+
+    </RelativeLayout>
+
 </LinearLayout>
